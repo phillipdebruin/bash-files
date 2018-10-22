@@ -1,4 +1,4 @@
 
 function aws-profileName () {
-    	aws --profile bcfs $@
+    	aws --profile profileName $@
 }
