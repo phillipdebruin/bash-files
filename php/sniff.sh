@@ -21,10 +21,10 @@ function sniff () {
 	OUT3=0
 	
 	if [ "$OUT3" = "0" ]; then
-		~/.config/composer/vendor/bin/phpcbf --standard=PSR2 --standard=CakePHP $(pwd)/app/ -n
+		~/.config/composer/vendor/bin/phpcbf --standard=CakePHP --standard=PSR2 $(pwd)/database $(pwd)/app -n
 		OUT1=$?
 	
-		~/.config/composer/vendor/bin/phpcs --standard=PSR2 $(pwd)/app/ -n
+		~/.config/composer/vendor/bin/phpcs --standard=PSR2 $(pwd)/app -n
 		OUT2=$?
 
 		if [ "$OUT1" != "0" ]; then
