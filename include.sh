@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 HERE=~/bash-files
 
 source $HERE/aliases.sh
@@ -5,6 +7,7 @@ source $HERE/aliases.sh
 source $HERE/aws/profiles.sh
 
 source $HERE/git/aliases.sh
+source $HERE/git/gitclean.sh
 source $HERE/git/commit.sh
 source $HERE/git/pull.sh
 source $HERE/git/push.sh

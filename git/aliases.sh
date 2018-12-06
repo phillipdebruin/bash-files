@@ -1,4 +1,5 @@
-alias gitclean="git branch | grep -v "master" | grep -v "develop" | xargs git branch -d"
+#!/usr/bin/env bash
+
 alias gitprune="git remote prune origin"
 
 alias giit="git status"

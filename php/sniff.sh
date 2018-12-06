@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function sniff () {
 
 	# composer global require "phpunit/phpunit" ; composer global require "squizlabs/php_codesniffer=3.*" ; composer global require "cakephp/cakephp-codesniffer=3.*" ; composer global require "codacy/coverage:dev-master"
