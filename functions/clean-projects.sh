@@ -4,7 +4,7 @@ function clean-projects () {
         do
             cd $d
             if [ -d .git ]; then
-                echo "Starting $(pwd)"
+                echo -e "\e[44m Starting $d "$reset_color
                 git fetch
                 develop
                 pull
@@ -12,7 +12,7 @@ function clean-projects () {
                 pull
                 gitclean
                 gitprune
-                echo "Finished $(pwd)"
+                echo -e "\e[44m Finished $d "$reset_color
             fi;
             work
         done
