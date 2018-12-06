@@ -14,4 +14,4 @@ source $HERE/php/sniff.sh
 
 source $HERE/vagrant/aliases.sh
 
-source $HERE/functions/clean-projects.sh
+source $HERE/functions/projects.sh
