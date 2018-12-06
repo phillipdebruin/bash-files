@@ -1,6 +1,6 @@
 function clean-projects () {
     	work
-    	for d in */;
+    	for d in $(ls -d */);
         do
             cd $d
             if [ -d .git ]; then
