@@ -37,15 +37,13 @@ function refresh-projects () {
         do
             cd $d
             if [ -d .git ]; then
-                update
-                clean
+                refresh
             fi;
             work
         done
 }
 
 function update() {
-    	echo ""
         echo -e "\e[44m Updating ${PWD##*/} " $reset_color
     	echo ""
         fetch
@@ -55,18 +53,15 @@ function update() {
         pulld
     	echo ""
         echo -e "\e[44m Updated ${PWD##*/} " $reset_color
-    	echo ""
 }
 
 function clean() {
-    	echo ""
         echo -e "\e[44m Cleaning ${PWD##*/} " $reset_color
     	echo ""
         gitclean
         gitprune
     	echo ""
         echo -e "\e[44m Cleaned ${PWD##*/} " $reset_color
-    	echo ""
 }
 
 function refresh() {
