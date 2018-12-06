@@ -13,3 +13,5 @@ source $HERE/php/phpunit.sh
 source $HERE/php/sniff.sh
 
 source $HERE/vagrant/aliases.sh
+
+source $HERE/functions/clean-projects.sh
