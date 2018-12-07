@@ -5,6 +5,9 @@ function dockssh () {
     then
         docker exec -it $1 /bin/bash
     else
+        echo ""
+        docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}'
+        echo ""
         string=$(docker ps --format '{{.Names}}')
         eval "arr=($string)"
         select CONTAINER in $arr;
