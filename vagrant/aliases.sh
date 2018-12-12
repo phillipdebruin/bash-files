@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-alias vup="clear ; cd ~/Homestead; vagrant up ; vagrant ssh -- -t 'cd code ; /bin/bash'"
-alias vrep="clear ; cd ~/Homestead; vagrant reload --provision ; vagrant ssh -- -t 'cd code ; /bin/bash'"
+alias homestead="cd ~/Homestead"
+alias vup="homestead ; vagrant up ; vssh"
+alias vrep="homestead ; vagrant reload --provision ; vssh"
+alias vssh="homestead ; vagrant ssh -- -t 'cd code ; /bin/bash'"
