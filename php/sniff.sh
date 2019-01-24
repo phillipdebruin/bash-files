@@ -12,21 +12,14 @@ function sniff () {
     	OUT3=1
 	fi
 	
-	if [ ! -d ~/.config/composer/vendor/cakephp/cakephp-codesniffer  ]; then
-
-    	echo -e "\U1F926 \e[41m cakephp-codesniffer not found! "$reset_color
-		echo ""
-    	OUT3=1
-	fi
-
 	echo ""
 	OUT3=0
 	
 	if [ "$OUT3" = "0" ]; then
-		~/.config/composer/vendor/bin/phpcbf --standard=CakePHP --standard=PSR2 $(pwd)/database $(pwd)/app -n
+		~/.config/composer/vendor/bin/phpcbf --standard=flickerleap --extensions=php --report=diff $(pwd)/database $(pwd)/app $(pwd)/config $(pwd)/routes $(pwd)/tests -n
 		OUT1=$?
 	
-		~/.config/composer/vendor/bin/phpcs --standard=PSR2 $(pwd)/app -n
+		~/.config/composer/vendor/bin/phpcs --standard=flickerleap --extensions=php app/ config/  routes/ tests/ -n
 		OUT2=$?
 
 		if [ "$OUT1" != "0" ]; then
@@ -43,10 +36,6 @@ function sniff () {
 			echo -e "\U1F44C \e[42m Sniff successful "$reset_color
 			echo ""
    			return 0
-		else
-			echo -e "\U1F44E \e[41m Sniff failure! "$reset_color
-			echo ""
-   			return 1
 		fi
 	else
 		echo -e "\U1F44E \e[41m Failure! "$reset_color

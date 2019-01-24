@@ -19,6 +19,7 @@ source $HERE/docker/aliases.sh
 source $HERE/docker/dockrm.sh
 source $HERE/docker/dockstop.sh
 source $HERE/docker/dockssh.sh
+source $HERE/docker/docklogs.sh
 
 source $HERE/vagrant/aliases.sh
 
