@@ -6,6 +6,8 @@ source $HERE/aliases.sh
 
 source $HERE/aws/profiles.sh
 
+source $HERE/android/aliases.sh
+
 source $HERE/git/aliases.sh
 source $HERE/git/gitclean.sh
 source $HERE/git/commit.sh
@@ -17,6 +19,7 @@ source $HERE/php/sniff.sh
 
 source $HERE/docker/aliases.sh
 source $HERE/docker/dockrm.sh
+source $HERE/docker/dockstart.sh
 source $HERE/docker/dockstop.sh
 source $HERE/docker/dockssh.sh
 source $HERE/docker/docklogs.sh
