@@ -8,7 +8,7 @@ function docklogs () {
         echo ""
         docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}'
         echo ""
-        string=$(docker ps --format '{{.Names}}')
+        string=$(docker ps -a --format '{{.Names}}')
         eval "arr=($string)"
         select CONTAINER in $arr;
         do
