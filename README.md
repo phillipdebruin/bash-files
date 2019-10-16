@@ -9,4 +9,6 @@ $ git clone git@github.com:fishyfishphil/bash-files.git
 source ~/bash-files/include.sh
 ```
 
-3 - Go look at the files to see what commands are available and what they do.
+3 - Install jq
+
+4 - Go look at the files to see what commands are available and what they do.
