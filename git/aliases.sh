@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 alias gitprune="git remote prune origin"
-alias branches="echo $(git branch)"
+#alias branches="echo $(git branch)"
 
 alias giit="git status"
 alias diff="git diff ."
