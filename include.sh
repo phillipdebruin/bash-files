@@ -36,3 +36,7 @@ source $HERE/functions/projects.sh
 
 #source $HERE/variables.sh
 #source $HERE/work-functions.sh
+
+source $HERE/terraform/aliases.sh
+source $HERE/kubernetes/aliases.sh
+
